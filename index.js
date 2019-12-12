@@ -7,6 +7,7 @@ const express = require('express'); // pull in express library
 const app = express(); 
 
 // Is this the right spot?
+// Why. heroku. bah.
 const port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => res.send('Hello World!')); 
