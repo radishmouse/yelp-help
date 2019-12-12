@@ -2,12 +2,11 @@
 
 const yelp = require('yelp-fusion'); // calls in the library from that nice gitHub man
 
-
-
-
 // express code
 const express = require('express'); // pull in express library
 const app = express(); 
+
+// Is this the right spot?
 const port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => res.send('Hello World!')); 
