@@ -19,7 +19,8 @@ app.get('/:location/:apiKey', (req, res) => { // everything after :port is known
     const client = yelp.client(req.params.apiKey); 
 
     client.eventSearch({ // that's from way above, the yelp-fusion library (happens inside of a callback: when you see ":port/stuff", run this)
-        location:`${req.params.location}`
+        location:`${req.params.location}`,
+        limit: 50
     }).then(response => {
         // protect me from CORS! pulled from radishmouse's my-little-cors
         res.header("Access-Control-Allow-Origin", "*");
